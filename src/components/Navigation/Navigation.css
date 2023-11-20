@@ -1,0 +1,42 @@
+.nav {
+    display: flex;
+}
+
+.nav__list {
+    display: flex;
+    justify-content: space-between;
+    list-style-type: none;
+    align-items: center;
+    column-gap: 30px;
+    padding: 0;
+    margin: 0;
+}
+
+.nav__item {
+    font-weight: 500;
+    size: 12px;
+    line-height: 16px;
+}
+
+.nav__link {
+    color: #FFFFFF;
+}
+
+.nav__link-signin {
+    color: #FFFFFF;
+}
+
+@media (max-width: 420px) {
+    .nav__list {
+        column-gap: 14px;
+    }
+
+    .nav__item {
+        font-size: 10px;
+        line-height: 16px;
+    }
+
+    .nav__item:nth-child(2) {
+        padding: 5px 12px;
+    }
+}

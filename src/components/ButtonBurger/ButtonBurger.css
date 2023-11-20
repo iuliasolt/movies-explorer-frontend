@@ -1,0 +1,30 @@
+.burger-button {
+    display: none;
+    background-image: url('../../images/menu.svg');
+    background-color: transparent;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 44px;
+    height: 44px;
+    border: none;
+    cursor: pointer;
+    transition: opacity 0.5s;
+}
+
+.burger-button:hover {
+    opacity: 0.8;
+}
+
+@media (max-width: 769px) {
+    .burger-button {
+        display: block;
+    }
+
+}
+
+@media (max-width: 420px) {
+    .burger-button {
+        width: 39px;
+        background-size: 93%;
+    }
+}

@@ -1,0 +1,44 @@
+.movies {
+    min-height: 74vh;
+}
+
+.movies__button-container {
+    display: flex;
+    padding: 75px 0 81px;
+}
+
+.movies__load-button {
+    width: 320px;
+    min-height: 36px;
+    margin: 0 auto;
+    border-radius: 6px;
+    border: 1px solid #424242;
+    background-color: transparent;
+    cursor: pointer;
+    color: #ffffff;
+    text-align: center;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    transition: all 0.5s;
+}
+
+.movies__loading-button:hover {
+    opacity: 0.8;
+}
+
+@media (max-width: 769px) {
+    .movies__button-container {
+        padding-top: 60px;
+        padding-bottom: 83px;
+    }
+    
+}
+
+@media (max-width: 420px) {
+    .movies__button-container {
+        padding: 60px 40px 69px;
+    }
+    
+}

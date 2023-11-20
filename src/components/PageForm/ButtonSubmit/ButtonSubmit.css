@@ -1,0 +1,36 @@
+.button-submit {
+    margin-top: 71px;
+    border-radius: 3px;
+    background: #4285f4;
+    min-height: 45px;
+    cursor: pointer;
+    color: #ffffff;
+    text-align: center;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    border: none;
+    transition: opacity 0.5s;
+}
+
+.button-submit_disabled {
+    color: #c2c2c2;
+    background: #f8f8f8;
+}
+
+.button-submit_disabled:disabled {
+    pointer-events: none;
+}
+
+.button-submit:hover {
+    opacity: 0.8;
+}
+
+@media (max-width: 420px) {
+    .button-submit {
+        margin-top: 157px;
+        font-size: 12px;
+    }
+
+}
