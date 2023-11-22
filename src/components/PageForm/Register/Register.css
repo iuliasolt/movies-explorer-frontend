@@ -1,8 +1,5 @@
+
 .register {
-    margin: 0;
-    padding: 0;
-}
-.register__container {
     display: flex;
     min-height: 266px;
     flex-direction: column;

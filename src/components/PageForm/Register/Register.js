@@ -33,7 +33,6 @@ const Register = () => {
             linkName="Войти"
             >
                 <div className="register">
-                <div className="register__container">
                     <Input
                     name="name"
                     type="text"
@@ -72,7 +71,6 @@ const Register = () => {
                     <span className="register__error">
                         Пользователь с таким email уже существует.
                     </span>
-                </div>
                 </div>
                 <ButtonSubmit 
                 title="Зарегистрироваться"
