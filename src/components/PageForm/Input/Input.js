@@ -13,12 +13,12 @@ const Input = ({
   placeholder,
 }) => {
   return (
-    <div className="input__container">
+    <div className="input">
       <label className="input__label" htmlFor={name}>
         {label}
       </label>
       <input
-        className={`input ${validationMessage && 'input_invalid'}`}
+        className={`input__container ${validationMessage && 'input_invalid'}`}
         type={type}
         name={name}
         id={name}
