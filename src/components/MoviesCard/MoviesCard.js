@@ -26,7 +26,7 @@ const MoviesCard = ({ link, alt, title, length }) => {
             Сохранить
           </button>
         ) : (
-          ""
+          ''
         )}
         {location === "/saved-movies" ? (
           <button
@@ -35,7 +35,7 @@ const MoviesCard = ({ link, alt, title, length }) => {
             onClick={handleDeleteCard}
           />
         ) : (
-          ""
+          ''
         )}
         <div
           className={`card__cover-tip ${isSave && `card__cover-tip_active`}`}

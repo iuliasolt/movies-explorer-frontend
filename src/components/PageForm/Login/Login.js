@@ -5,25 +5,25 @@ import ButtonSubmit from "../ButtonSubmit/ButtonSubmit";
 import PageForm from "../PageForm";
 import { useForm } from "../../../utils/hooks/useForm";
 
-const Login = ({ setLoggedIn }) => {
+const Login = ({ setIsLoggedIn }) => {
   const navigate = useNavigate();
 
   const onSubmit = (evt) => {
     evt.preventDefault();
-    setLoggedIn(true);
+    setIsLoggedIn(true);
     navigate("/movies", { replace: true });
   };
 
   const { values, handleChange } = useForm({
     email: {
-      isValid: "",
-      validationMessage: "",
-      value: "",
+      isValid: '',
+      validationMessage: '',
+      value: '',
     },
     password: {
-      isValid: "",
-      validationMessage: "",
-      value: "",
+      isValid: '',
+      validationMessage: '',
+      value: '',
     },
   });
   return (
@@ -55,7 +55,7 @@ const Login = ({ setLoggedIn }) => {
             value={values.password.value}
             onChange={handleChange}
             required={true}
-            minLength="2"
+            minLength="8"
             maxLength="30"
             placeholder="Введите пароль"
             validationMessage={values.password.validationMessage}

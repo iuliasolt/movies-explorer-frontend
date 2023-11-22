@@ -7,14 +7,14 @@ const Profile = ({ setIsLoggedIn }) => {
 
   const { values, handleChange } = useForm({
     name: {
-      isValid: "",
-      validationMessage: "",
-      value: "",
+      isValid: '',
+      validationMessage: '',
+      value: '',
     },
     email: {
-      isValid: "",
-      validationMessage: "",
-      value: "",
+      isValid: '',
+      validationMessage: '',
+      value: '',
     },
   });
 
@@ -37,25 +37,25 @@ const Profile = ({ setIsLoggedIn }) => {
             Имя
             <input
               className={`profile__input ${
-                values.name.validationMessage && "profile__input-error"
+                values.name.validationMessage && "profile__input_error"
               }`}
               type="text"
               name="name"
               value={values.name.value}
               onChange={handleChange}
               minLength="2"
-              maxLength="3"
-              required
-            />
+              maxLength="30"
+              required     
+              />
             <span className="profile__input-error">
               {values.name.validationMessage}
             </span>
           </label>
           <label className="profile__input-label">
-            Email
+            E-mail
             <input
               className={`profile__input ${
-                values.email.validationMessage && "profile__input-error"
+                values.email.validationMessage && "profile__input_error"
               }`}
               type="email"
               name="email"
@@ -69,12 +69,12 @@ const Profile = ({ setIsLoggedIn }) => {
           </label>
           <div className="profile__button">
             <span className="profile__error">
-              При обновлении профиля произошла ошибка
+              При обновлении профиля произошла ошибка.
             </span>
             <button
               className={`profile__button-edit ${
                 values.email.isValid && values.name.isValid
-                  ? ""
+                  ? ''
                   : "profile__button-edit_disabled"
               }`}
               type="submit"

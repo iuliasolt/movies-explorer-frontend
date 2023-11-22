@@ -2,6 +2,7 @@ import "./BurgerMenu.css";
 import { NavLink, Link } from "react-router-dom";
 
 const BurgerMenu = ({ isBurgerOpen, setIsBurgerOpen }) => {
+  
   const handleClickClose = () => {
     setIsBurgerOpen(false);
   };

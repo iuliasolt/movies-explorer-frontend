@@ -22,12 +22,13 @@ const Register = () => {
             value: '',
         }
     });
+
     return (
         <main className="content">
             <PageForm
             title="Добро пожаловать!"
             formName="register"
-            buttonText="Уже зарегистрированы?"
+            underButtonText="Уже зарегистрированы?"
             link="/signin"
             linkName="Войти"
             >
@@ -62,7 +63,7 @@ const Register = () => {
                     value={values.password.value}
                     onChange={handleChange}
                     required={true}
-                    minLength="2"
+                    minLength="8"
                     maxLength="30"
                     placeholder="Введите пароль"
                     validationMessage={values.password.validationMessage}
@@ -80,7 +81,7 @@ const Register = () => {
                 </PageForm>
 
         </main>
-    )
+    );
 }
 
 export default Register;

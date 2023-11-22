@@ -1,6 +1,6 @@
 .card {
     margin: 0;
-    position: inherit;
+    position: relative;
     list-style-type: none;
 }
 

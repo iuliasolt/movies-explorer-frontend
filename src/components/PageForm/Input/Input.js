@@ -18,7 +18,7 @@ const Input = ({
         {label}
       </label>
       <input
-        className={`input &{validationMessage && 'input_invalid'}`}
+        className={`input ${validationMessage && 'input_invalid'}`}
         type={type}
         name={name}
         id={name}

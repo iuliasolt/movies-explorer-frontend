@@ -10,7 +10,7 @@
     width: 38px;
     height: 38px;
     padding: 17px 0 18px;
-    transition: opacity 0.6s, transform 0.5s;
+    transition: opacity 0.5s, transform 0.5s;
 }
 
 .header__logo:hover {
@@ -18,13 +18,13 @@
     transform: scale(1.13);
 }
 
-@media (max-width: 769px) {
+@media screen and (max-width: 769px) {
     .header {
         padding: 0 30px;
     }
 }
 
-@media (max-width: 420px) {
+@media screen and (max-width: 420px) {
     .header {
         padding: 0 14px;
     }

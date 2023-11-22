@@ -16,7 +16,7 @@ const Footer = () => {
               <a
                 className="link"
                 href="https://praktikum.yandex.ru/"
-                targer="_blank"
+                target="_blank"
               >
                 Яндекс.Практикум
               </a>

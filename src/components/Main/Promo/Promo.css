@@ -14,7 +14,8 @@
 }
 
 .promo__title {
-    font-weight: 400;
+    font-weight: normal;
+    font-style: normal;
     font-size: 50px;
     line-height: 58px;
     letter-spacing: -0.04em;

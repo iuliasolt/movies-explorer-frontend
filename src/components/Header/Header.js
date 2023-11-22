@@ -10,8 +10,8 @@ const Header = ({ isLoggedIn }) => {
                 <Link to="/" >
                     <img className="header__logo" alt="Логотип сайта" src={logo} />
                 </Link>
-                { isLoggedIn && <Navigation />}
-                { isLoggedIn && <UsersNavigation />}
+                {!isLoggedIn && <Navigation />}
+                {isLoggedIn && <UsersNavigation />}
                 
         </header>
     );

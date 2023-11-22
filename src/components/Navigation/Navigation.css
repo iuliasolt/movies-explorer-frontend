@@ -16,6 +16,16 @@
     font-weight: 500;
     size: 12px;
     line-height: 16px;
+    text-decoration: none;
+}
+
+.nav__item:nth-child(2) {
+    border: none;
+    outline: 0;
+    cursor: pointer;
+    padding: 8px 20px;
+    border-radius: 3px;
+    background-color: #3ddc84;
 }
 
 .nav__link {
@@ -23,7 +33,7 @@
 }
 
 .nav__link-signin {
-    color: #FFFFFF;
+    color: #000000;
 }
 
 @media (max-width: 420px) {

@@ -24,7 +24,7 @@
     transition: all 0.5s;
 }
 
-.movies__loading-button:hover {
+.movies__load-button:hover {
     opacity: 0.8;
 }
 

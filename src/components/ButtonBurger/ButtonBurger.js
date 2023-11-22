@@ -1,16 +1,17 @@
 import "./ButtonBurger.css";
 
-const ButtonBurger = () => {
-  const handleClickOpen = () => {
+const ButtonBurger = ({ setIsBurgerOpen }) => {
+
+  const handleClickBurger = () => {
     setIsBurgerOpen(true);
   };
 
   return (
     <button
       className="burger-button"
-      onClick={handleClickOpen}
+      onClick={handleClickBurger}
       type="button"
-    ></button>
+    />
   );
 };
 

@@ -6,12 +6,12 @@
     visibility: hidden;
     opacity: 0;
     z-index: 1000;
+    display: flex;
     top: 0;
     bottom: 0;
     left: 0;
     right: 0;
     transition: visibility 0.3s, opacity 0.3s;
-
 }
 
 .burger-menu_active {

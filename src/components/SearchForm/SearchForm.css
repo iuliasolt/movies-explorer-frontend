@@ -2,7 +2,7 @@
     padding: 79px 70px 6px;
 }
 
-.search__form  {
+.search__form {
     display: flex;
     flex-direction: column;
 }
@@ -62,11 +62,18 @@
     margin-top: 40px;
 }
 
+@media (max-width: 769px) {
+    .search {
+        padding: 79px 30px 6px;
+    }
+
+}
+
 @media (max-width: 420px) {
     .search {
         padding: 79px 14px 6px;
     }
-    
+
     .search__input {
         height: 44px;
         padding-left: 13px;
