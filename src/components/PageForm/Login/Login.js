@@ -36,6 +36,7 @@ const Login = ({ setIsLoggedIn }) => {
         linkName="Регистрация"
         onSubmit={onSubmit}
       >
+        <div className="login">
         <div className="login__container">
           <Input
             name="email"
@@ -64,11 +65,13 @@ const Login = ({ setIsLoggedIn }) => {
             Вы ввели неправильный логин или пароль.
           </span>
         </div>
+        </div>
         <ButtonSubmit
           title="Войти"
           disabled={values.email.isValid && values.password.isValid}
         />
       </PageForm>
+      
     </main>
   );
 };
