@@ -1,0 +1,31 @@
+.login {
+    margin: 0;
+    padding: 0;
+}
+.login__container {
+    display: flex;
+    height: 266px;
+    flex-direction: column;
+    gap: 19px;
+    position: relative;
+}
+
+.login__error {
+    width: 396px;
+    position: absolute;
+    color: #ff004c;
+    text-align: center;
+    font-size: 11px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    top: 304px;
+}
+
+@media (max-width: 420px) {
+    .login__error {
+        width: 260px;
+        top: 390px;
+    }
+    
+}

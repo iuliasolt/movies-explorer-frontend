@@ -1,0 +1,29 @@
+
+.register {
+    display: flex;
+    min-height: 266px;
+    flex-direction: column;
+    position: relative;
+    gap: 19px;
+}
+
+.register__error {
+    position: absolute;
+    width: 396px;
+    color: #ff004c;
+    text-align: center;
+    font-size: 11px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    top: 304px;
+    width: 396px;
+}
+
+@media (max-width: 420px) {
+    .register__error {
+        width: 260px;
+        top: 390px;
+    }
+    
+}
