@@ -62,6 +62,10 @@
     margin-top: 40px;
 }
 
+.search__input_error::placeholder {
+    color: #EE3465;
+}
+
 @media (max-width: 769px) {
     .search {
         padding: 79px 30px 6px;

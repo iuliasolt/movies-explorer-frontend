@@ -1,31 +1,16 @@
-import { useNavigate } from "react-router-dom";
 import "./Login.css";
 import Input from "../Input/Input";
 import ButtonSubmit from "../ButtonSubmit/ButtonSubmit";
 import PageForm from "../PageForm";
-import { useForm } from "../../../utils/hooks/useForm";
+import useForm  from "../../../utils/hooks/useForm";
 
-const Login = ({ setIsLoggedIn }) => {
-  const navigate = useNavigate();
-
+const Login = ({ handleLogin, isServerMessage, isDisabledInput }) => {
+  const { values, handleChange, errors, isValid } = useForm();
   const onSubmit = (evt) => {
     evt.preventDefault();
-    setIsLoggedIn(true);
-    navigate("/movies", { replace: true });
+    handleLogin(values.email, values.password);
   };
 
-  const { values, handleChange } = useForm({
-    email: {
-      isValid: '',
-      validationMessage: '',
-      value: '',
-    },
-    password: {
-      isValid: '',
-      validationMessage: '',
-      value: '',
-    },
-  });
   return (
     <main className="content">
       <PageForm
@@ -37,41 +22,38 @@ const Login = ({ setIsLoggedIn }) => {
         onSubmit={onSubmit}
       >
         <div className="login">
-        <div className="login__container">
-          <Input
-            name="email"
-            type="email"
-            label="E-mail"
-            value={values.email.value}
-            onChange={handleChange}
-            required={true}
-            minLength="2"
-            placeholder="E-mail"
-            validationMessage={values.email.validationMessage}
-          />
-          <Input
-            name="password"
-            type="password"
-            label="Пароль"
-            value={values.password.value}
-            onChange={handleChange}
-            required={true}
-            minLength="8"
-            maxLength="30"
-            placeholder="Введите пароль"
-            validationMessage={values.password.validationMessage}
-          />
-          <span className="login__error">
-            Вы ввели неправильный логин или пароль.
-          </span>
+          <div className="login__container">
+            <Input
+              name="email"
+              type="email"
+              label="E-mail"
+              value={values.email || ""}
+              pattern="^\S+@\S+\.\S+$"
+              onChange={handleChange}
+              required={true}
+              minLength="2"
+              placeholder="E-mail"
+              validationMessage={errors.email}
+              disabled={isDisabledInput}
+            />
+            <Input
+              name="password"
+              type="password"
+              label="Пароль"
+              value={values.password || ""}
+              onChange={handleChange}
+              required={true}
+              minLength="8"
+              maxLength="30"
+              placeholder="Введите пароль"
+              validationMessage={errors.password}
+              disabled={isDisabledInput}
+            />
+            <span className="login__error">{isServerMessage}</span>
+          </div>
         </div>
-        </div>
-        <ButtonSubmit
-          title="Войти"
-          disabled={values.email.isValid && values.password.isValid}
-        />
+        <ButtonSubmit title="Войти" disabled={isValid} />
       </PageForm>
-      
     </main>
   );
 };
