@@ -1,0 +1,66 @@
+.switch {
+    display: none;
+}
+
+.switch:checked+.switch-label::after {
+    left: 20px;
+    background-color: #fff;
+  }
+  
+  .switch:checked+.switch-label::before {
+    background-color: #3ddc84;
+  }
+
+.switch-label {
+    color: #ffffff;
+    cursor: pointer;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 18px;
+    position: relative;
+    margin: 29px auto 0;
+    padding-left: 46px;
+    transition: opacity 0.8s;
+}
+
+.switch-label:hover {
+    opacity: 0.8;
+  }
+  
+  .switch-label::before {
+    content: '';
+    width: 34px;
+    height: 14px;
+    background-color: #ccc;
+    border-radius: 20px;
+    position: absolute;
+    top: 2px;
+    left: -1px;
+    transition: all 0.6s ease-in;
+  }
+  
+  .switch-label::after {
+    content: '';
+    width: 10px;
+    height: 10px;
+    background-color: #f5f5f5;
+    border-radius: 50%;
+    position: absolute;
+    top: 4px;
+    left: 2px;
+    transition: all 0.3s ease-in;
+  }
+
+@media (max-width: 769px) {
+    .switch-label {
+        margin-top: 41px;
+    }
+}
+
+@media (max-width: 420px) {
+    .switch-label {
+        margin-top: 46px;
+        font-size: 11px;
+    }
+}

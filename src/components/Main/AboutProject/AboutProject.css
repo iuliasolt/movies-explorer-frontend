@@ -1,0 +1,173 @@
+.project {
+    margin: 110px auto 0;
+    padding: 0 70px;
+}
+
+.project__title {
+    margin: 0;
+    padding-bottom: 23px;
+    font-style: normal;
+    font-size: 22px;
+    font-weight: normal;
+    line-height: 27px;
+    letter-spacing: -0.04em;
+    color: #ffffff;
+    border-bottom: 1px solid #dadada;
+}
+
+.project__descriptions {
+    display: grid;
+    justify-content: space-between;
+    margin-top: 70px;
+    column-gap: 40px;
+    row-gap: 20px;
+    grid-template-columns: 1fr 1fr;
+}
+
+.description {
+    max-width: 500px;
+    color: #ffffff;
+}
+
+.description__title {
+    margin: 0 0 26px;
+    font-size: 20px;
+    font-weight: normal;
+    line-height: 24px;
+    letter-spacing: -0.04em;
+    font-style: normal;
+}
+
+.description__subtitle {
+    margin: 0;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 20px;
+    font-style: normal;
+}
+
+.project__progressline {
+    display: flex;
+    margin: 110px 0;
+}
+
+.progressline-item {
+    width: 100%;
+    max-width: 228px;
+}
+
+.progressline-item__title {
+    background: #303030;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 17px;
+    text-align: center;
+    color: #ffffff;
+    padding: 9px 0;
+    margin: 0;
+    font-style: normal;
+}
+
+.progressline-item__subtitle {
+    color: #8B8B8B;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 17px;
+    font-style: normal;
+    text-align: center;
+    margin: 14px 0 0;
+}
+
+.progressline-item__title_backend {
+    background: #3DDC84;
+    color: #000000;
+}
+
+.progressline-item:last-of-type {
+    max-width: 912px;
+}
+
+@media (max-width: 769px) {
+    .project {
+        margin-top: 90px;
+        padding: 0 50px;
+    }
+    
+    .project__descriptions {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        column-gap: 30px;
+    }
+    .description {
+        max-width: 310px;
+    }
+    .description__subtitle {
+        font-size: 12px;
+        line-height: 18px;
+    }
+
+    .project__progressline {
+        margin: 93px 0 93px;
+    }
+
+    .progressline-item {
+        max-width: 140px;
+    }
+}
+
+@media (max-width: 630px) {
+    .project__descriptions {
+        grid-template-columns: 1fr;
+        row-gap: 56px;
+        margin-top: 60px
+    }
+    .description {
+        max-width: 410px;
+    }
+
+    .project__title {
+        padding-bottom: 28px;
+        font-size: 18px;
+        line-height: 22px;
+    }
+}
+
+@media (max-width: 445px) {
+    .project {
+        margin-top: 70px;
+        padding: 0 18px;
+    }
+
+    .description {
+        max-width: 284px;
+    }
+
+    .description__title {
+        margin: 0 0 16px;
+        font-size: 18px;
+        line-height: 22px;
+    }
+
+    .description__subtitle {
+        font-size: 11px;
+        line-height: 16px;
+    }
+
+    .project__progressline {
+        margin: 60px 0 69px;
+    }
+
+    .progressline-item__title {
+        font-size: 11px;
+        line-height: 13px;
+    }
+
+    .progressline-item__subtitle {
+        margin: 10px 0 0;
+        font-size: 11px;
+        line-height: 13px;
+    }
+    .progressline-item {
+        max-width: 100px;
+    }
+}
