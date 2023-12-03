@@ -7,11 +7,11 @@ import { KEYWORD_NEED, MOVIE_NAME } from "../../utils/config/config";
 const SearchForm = ({ checkboxActive, onSearch, onFilter }) => {
   const [isError, setIsError] = useState(false);
   const [searchValue, setSearchValue] = useState("");
-  const location = useLocation.pathname;
+  const location = useLocation().pathname;
 
   useEffect(() => {
     if (location === "/movies") {
-      setSearchValue(location.getItem("movieSearch"));
+      setSearchValue(localStorage.getItem("movieSearch"));
     }
     if (location === "/saved-movies") {
       setSearchValue("");

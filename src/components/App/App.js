@@ -43,13 +43,13 @@ const App = () => {
         .finally(() => {});
   }, [isLoggedIn]);
 
-  const handleRegister = (name, email, password) => {
+  function onRegister(name, email, password) {
     setIsDisabledInput(true);
     mainApi
       .register(name, email, password)
       .then((res) => {
         if (res) {
-          handleLogin(email, password);
+          onLogin(email, password);
         }
       })
       .catch((e) => {
@@ -60,7 +60,7 @@ const App = () => {
       });
   };
 
-  const handleLogin = (email, password) => {
+ function onLogin (email, password) {
     setIsDisabledInput(true);
     mainApi
       .login(email, password)
@@ -77,13 +77,13 @@ const App = () => {
       });
   };
 
-  const handleLogout = () => {
+  const handleSignOut = () => {
     localStorage.clear();
     setIsLoggedIn(false);
     navigate("/", { replace: true });
   };
 
-  const handleTokenCheck = () => {
+  const tokenCheck = () => {
     const token = localStorage.getItem("token");
     if (token) {
       mainApi
@@ -95,14 +95,14 @@ const App = () => {
           }
         })
         .catch((e) => {
-          handleLogout();
-          console.log(e.status);
+          handleSignOut();
+          console.log(`Не удалось получить токен: ${e}`);
         });
     }
   };
 
   useEffect(() => {
-    handleTokenCheck();
+    tokenCheck();
   }, []);
 
   const handleUpdateProfile = ({ name, email }) => {
@@ -199,7 +199,7 @@ const App = () => {
               path="/signup"
               element={
                 <Register
-                  handleRegister={handleRegister}
+                  onRegister={onRegister}
                   isServerMessage={isServerMessage}
                   isDisabledInput={isDisabledInput}
                 />
@@ -209,7 +209,7 @@ const App = () => {
               path="/signin"
               element={
                 <Login
-                  handleLogin={handleLogin}
+                  onLogin={onLogin}
                   isServerMessage={isServerMessage}
                   isDisabledInput={isDisabledInput}
                 />
@@ -221,7 +221,7 @@ const App = () => {
                 <ProtectedRoute
                   element={Profile}
                   isLoggedIn={isLoggedIn}
-                  handleLogout={handleLogout}
+                  handleSignOut={handleSignOut}
                   handleUpdateProfile={handleUpdateProfile}
                   isServerMessage={isServerMessage}
                   setIsServerMessage={setIsServerMessage}

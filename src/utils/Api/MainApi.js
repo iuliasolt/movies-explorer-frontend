@@ -43,7 +43,7 @@ export const getContent = (token) => {
   return fetch(`${MAIN_API_URL}/users/me`, {
     method: "GET",
     headers: {
-      Accept: "application/json",
+      "Accept": "application/json",
       "Content-Type": "application/json",
       Authorization: `Bearer ${token}`,
     },
@@ -81,8 +81,8 @@ export const deleteCard = (movieId) => {
   return fetch(`${MAIN_API_URL}/movies/${movieId}`, {
     method: "DELETE",
     headers: {
-      Accept: "application/json",
       "Content-Type": "application/json",
+      Authorization: `Bearer ${localStorage.getItem("token")}`,
     },
   }).then((res) => handleResponse(res));
 };
@@ -104,10 +104,10 @@ export const saveCardMovies = (movie) => {
       description: movie.description,
       image: `${CARDS_API_URL}${movie.image.url}`,
       trailerLink: movie.trailerLink,
-      thumbnail: `${CARDS_API_URL} ${movie.image.formats.thumbnail.url}`,
+      thumbnail: `${CARDS_API_URL}${movie.image.formats.thumbnail.url}`,
       movieId: movie.id,
-      nameRu: movie.nameRu,
-      nameEn: movie.nameEn,
+      nameRU: movie.nameRU,
+      nameEN: movie.nameEN,
     }),
   }).then((res) => handleResponse(res));
 };
@@ -116,7 +116,7 @@ export const getUserById = () => {
   return fetch(`${MAIN_API_URL}/users/me`, {
     method: "GET",
     headers: {
-      Accept: "application/json",
+      "Accept": "application/json",
       "Content-Type": "application/json",
       Authorization: `Bearer ${localStorage.getItem("token")}`,
     },

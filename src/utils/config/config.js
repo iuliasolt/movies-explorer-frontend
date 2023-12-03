@@ -5,6 +5,7 @@ const FOOTEREDPOINTS = ["/movies", "saved-movies", "/"];
 const MAIN_API_URL = "https://api.movies-api.nomoredomainsrocks.ru";
 const CARDS_API_URL = "https://api.nomoreparties.co";
 
+
 const MOVIES_API_URL = "https://api.nomoreparties.co/beatfilm-movies";
 
 const NOT_FOUND = "Ничего не найдено";

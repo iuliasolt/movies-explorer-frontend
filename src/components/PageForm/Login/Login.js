@@ -4,11 +4,11 @@ import ButtonSubmit from "../ButtonSubmit/ButtonSubmit";
 import PageForm from "../PageForm";
 import useForm  from "../../../utils/hooks/useForm";
 
-const Login = ({ handleLogin, isServerMessage, isDisabledInput }) => {
+const Login = ({ onLogin, isServerMessage, isDisabledInput }) => {
   const { values, handleChange, errors, isValid } = useForm();
   const onSubmit = (evt) => {
     evt.preventDefault();
-    handleLogin(values.email, values.password);
+    onLogin(values.email, values.password);
   };
 
   return (

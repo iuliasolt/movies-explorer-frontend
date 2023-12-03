@@ -4,12 +4,12 @@ import ButtonSubmit from "../ButtonSubmit/ButtonSubmit";
 import PageForm from "../PageForm";
 import useForm  from "../../../utils/hooks/useForm";
 
-const Register = ({ handleRegister, isServerMessage, isDisabledInput }) => {
+const Register = ({ onRegister, isServerMessage, isDisabledInput }) => {
   const { values, handleChange, errors, isValid } = useForm();
 
   const onSubmit = (evt) => {
     evt.preventDefault();
-    handleRegister(values.name, values.email, values.password);
+    onRegister(values.name, values.email, values.password);
   };
 
   return (

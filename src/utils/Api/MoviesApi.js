@@ -2,7 +2,7 @@ import { MOVIES_API_URL } from "../config/config";
 
   /*Проверка ошибки*/
 export const handleResponse = (res) => {
-    if (res.ok) {
+    if (!res.ok) {
         // если ошибка, отклоняем промис
         return Promise.reject(`Ошибка: ${res.status}`);
     }

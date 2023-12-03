@@ -30,16 +30,16 @@ const MoviesCard = ({
     onDeleteMovie(movie);
   };
 
-  const convertLength = (length) => {
-    const hours = Math.floor(length / 60);
-    const minutes = length % 60;
+  function convertLength(duration) {
+    const hours = Math.floor(duration / 60);
+    const minutes = duration % 60;
 
     if (hours > 0) {
       return `${hours}ч ${minutes}м`;
     } else {
       return `${minutes}м`;
     }
-  };
+  }
 
   return (
     <li className="card" id={movie.id}>
@@ -83,14 +83,14 @@ const MoviesCard = ({
                 ? movie.img
                 : `https://api.nomoreparties.co/${movie.image.url}`
             }
-            alt={movie.nameRu}
+            alt={movie.nameRU}
           />
         </a>
       </div>
       <div className="card__date-container">
-        <h2 className="card__title">{movie.nameRu}</h2>
+        <h2 className="card__title">{movie.nameRU}</h2>
         <div className="card__length-container">
-          <p className="card__length-value">{convertLength(movie.length)}</p>
+          <p className="card__length-value">{convertLength(movie.duration)}</p>
         </div>
       </div>
     </li>
