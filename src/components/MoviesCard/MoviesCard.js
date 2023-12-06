@@ -51,7 +51,6 @@ function convertLength(duration) {
                 !isSave && `card__button-save_active`
               }`}
               onClick={handleSave}
-              type="button"
             >
               Сохранить
             </button>
@@ -60,6 +59,7 @@ function convertLength(duration) {
                 isSave && `card__cover-tip_active`
               }`}
               onClick={handleSave}
+              role="button"
             />
           </>
         ) : (

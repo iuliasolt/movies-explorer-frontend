@@ -1,3 +1,8 @@
 .saved-movies {
     min-height: 74vh;
 }
+
+.content {
+    margin: 0;
+    padding: 0;
+}
