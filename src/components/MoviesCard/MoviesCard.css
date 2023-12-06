@@ -150,6 +150,7 @@
     .card__button-save {
         top: 10px;
         right: 10px;
+        opacity: 1;
     }
 
     .card__cover-tip {
@@ -160,5 +161,6 @@
     .card__button-remove {
         top: 10px;
         right: 10px;
+        opacity: 1;
     }
 }

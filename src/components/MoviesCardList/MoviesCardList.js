@@ -21,12 +21,12 @@ import {
 } from "../../utils/config/config";
 
 const MoviesCardList = ({
+  filterMovie,
   isLoading,
   onSaveMovie,
   isSaveFilms,
   onDeleteMovie,
   savedMovies,
-  filterMovie,
   notFound,
   requestErr,
   isLoadingMovies,
@@ -131,9 +131,8 @@ const MoviesCardList = ({
                   >
                     Ещё
                   </button>
-                ) : (
-                  ""
-                )}
+                ) : ""
+                }
               </div>
             </>
           )}

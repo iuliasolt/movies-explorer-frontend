@@ -8,6 +8,7 @@
     grid-template-columns: repeat(3, minmax(auto, 360px));
     padding-left: 30px;
     padding-right: 30px;
+    list-style-type: none;
 }
 
 @media (max-width: 1024) {

@@ -9,7 +9,7 @@ const MoviesCard = ({
   savedMovies,
 }) => {
   const isLiked = savedMovies.some(
-    (saveMovies) => saveMovies.movieId === movie.id
+    (saveMovie) => saveMovie.movieId === movie.id
   );
   const [isSave, setIsSave] = useState(isLiked);
 
@@ -30,7 +30,7 @@ const MoviesCard = ({
     onDeleteMovie(movie);
   };
 
-  function convertLength(duration) {
+function convertLength(duration) {
     const hours = Math.floor(duration / 60);
     const minutes = duration % 60;
 
@@ -39,7 +39,7 @@ const MoviesCard = ({
     } else {
       return `${minutes}м`;
     }
-  }
+  };
 
   return (
     <li className="card" id={movie.id}>
@@ -78,11 +78,7 @@ const MoviesCard = ({
         >
           <img
             className="card__image"
-            src={
-              isSaveFilms
-                ? movie.img
-                : `https://api.nomoreparties.co/${movie.image.url}`
-            }
+            src={isSaveFilms ? movie.img : `https://api.nomoreparties.co/${movie.image.url}`}
             alt={movie.nameRU}
           />
         </a>

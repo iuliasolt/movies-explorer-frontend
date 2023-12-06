@@ -55,7 +55,7 @@ const SearchForm = ({ checkboxActive, onSearch, onFilter }) => {
         <FilterCheckbox
           title="Короткометражки"
           onFilter={onFilter}
-          checkboxActive={checkboxActive}
+          isActive={checkboxActive}
         />
         <div className="search__line" />
       </form>
