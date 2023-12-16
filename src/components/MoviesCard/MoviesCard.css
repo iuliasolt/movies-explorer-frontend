@@ -14,9 +14,9 @@
 }
 
 .card__button-save {
-    /*display: none;*/
+    display: none;
     padding: 7px 10px;
-    /*cursor: pointer;*/
+    cursor: pointer;
     position: absolute;
     top: 14px;
     right: 14px;

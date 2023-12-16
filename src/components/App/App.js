@@ -13,7 +13,7 @@ import SavedMovies from "../SavedMovies/SavedMovies";
 import PageNotFound from "../PageNotFound/PageNotFound";
 import { HEADEREDPOINTS, FOOTEREDPOINTS } from "../../utils/config/config";
 import * as mainApi from "../../utils/Api/MainApi";
-import ProtectedRoute from "../ProtectedRoute/PtotectedRoute";
+import ProtectedRoute from "../ProtectedRoute/ProtectedRoute";
 
 const App = () => {
   const location = useLocation();

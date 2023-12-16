@@ -55,8 +55,8 @@ const MoviesCard = ({
               Сохранить
             </button>
             <div
-              onClick={handleSave}
               role="button"
+              onClick={handleSave}
               className={`card__cover-tip ${
                 isSave && `card__cover-tip_active`
               }`}
@@ -64,7 +64,6 @@ const MoviesCard = ({
           </>
         ) : (
           <button
-            type="button"
             onClick={handleDeleteCard}
             className="card__button-remove"
           />
