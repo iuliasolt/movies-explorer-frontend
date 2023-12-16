@@ -3,9 +3,7 @@ import "./Movies.css";
 import { useEffect, useState } from "react";
 import { filterLength, filterMovies } from "../../utils/hooks/MoviesFilter";
 import SearchForm from "../SearchForm/SearchForm";
-/* import MoviesCard from "../MoviesCard/MoviesCard";*/
 import MoviesCardList from "../MoviesCardList/MoviesCardList";
-/* import cardImage from "../../images/card.png";*/
 import * as moviesApi from "../../utils/Api/MoviesApi";
 
 const Movies = ({ savedMovies, onSaveMovie, onDeleteMovie }) => {
@@ -41,7 +39,7 @@ const Movies = ({ savedMovies, onSaveMovie, onDeleteMovie }) => {
 
   const handleSearchMovies = (searchQuery) => {
     setIsLoadingMovies(searchQuery);
-    localStorage.setItem("moviesSearch", searchQuery);
+    localStorage.setItem("movieSearch", searchQuery);
     localStorage.setItem("minMovies", checkboxActive);
     if (localStorage.getItem("allMovies")) {
       const movies = JSON.parse(localStorage.getItem("allMovies"));

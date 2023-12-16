@@ -13,25 +13,10 @@
     border-radius: 6px;
 }
 
-.card__container:hover .card__button-save {
-    opacity: 1;
-}
-
-.card__container:hover .card__button-remove {
-    opacity: 1;
-}
-
-.card__image {
-    display: block;
-    width: 100%;
-    border-radius: 6px;
-    aspect-ratio: 1.8 / 1;
-}
-
 .card__button-save {
-    display: none;
+    /*display: none;*/
     padding: 7px 10px;
-    cursor: pointer;
+    /*cursor: pointer;*/
     position: absolute;
     top: 14px;
     right: 14px;
@@ -47,6 +32,22 @@
     opacity: 0;
     transition: opacity 0.4s;
 }
+.card__container:hover .card__button-save {
+    opacity: 1;
+}
+
+.card__container:hover .card__button-remove {
+    opacity: 1;
+}
+
+.card__image {
+    display: block;
+    width: 100%;
+    border-radius: 6px;
+    aspect-ratio: 1.8 / 1;
+}
+
+
 
 .card__button-save_active {
     display: block;

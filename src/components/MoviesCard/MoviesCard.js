@@ -30,7 +30,7 @@ const MoviesCard = ({
     onDeleteMovie(movie);
   };
 
-function convertLength(duration) {
+  function convertLength(duration) {
     const hours = Math.floor(duration / 60);
     const minutes = duration % 60;
 
@@ -39,7 +39,7 @@ function convertLength(duration) {
     } else {
       return `${minutes}м`;
     }
-  };
+  }
 
   return (
     <li className="card" id={movie.id}>
@@ -55,18 +55,18 @@ function convertLength(duration) {
               Сохранить
             </button>
             <div
+              onClick={handleSave}
+              role="button"
               className={`card__cover-tip ${
                 isSave && `card__cover-tip_active`
               }`}
-              onClick={handleSave}
-              role="button"
             />
           </>
         ) : (
           <button
-            className="card__button-remove"
             type="button"
             onClick={handleDeleteCard}
+            className="card__button-remove"
           />
         )}
 
@@ -78,7 +78,11 @@ function convertLength(duration) {
         >
           <img
             className="card__image"
-            src={isSaveFilms ? movie.img : `https://api.nomoreparties.co/${movie.image.url}`}
+            src={
+              isSaveFilms
+                ? movie.img
+                : `https://api.nomoreparties.co/${movie.image.url}`
+            }
             alt={movie.nameRU}
           />
         </a>
